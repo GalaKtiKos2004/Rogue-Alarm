@@ -14,13 +14,13 @@ public class Signaling : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMover>() != null)
+        if (other.TryGetComponent(out PlayerMover mover))
             _targetValue = 1f;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<PlayerMover>() != null)
+        if (other.TryGetComponent(out PlayerMover mover))
             _targetValue = 0f;
     }
 }

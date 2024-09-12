@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerMover : MonoBehaviour
 {
     private const string Horizontal = "Horizontal";
